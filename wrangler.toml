@@ -1,0 +1,6 @@
+# Cloudflare Pages configuration
+name = "package-jinmu-me"
+compatibility_date = "2024-01-01"
+
+# Pages-specific settings
+pages_build_output_dir = "."

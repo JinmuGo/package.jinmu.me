@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>sls Package Repository</title>
+  <title>jinmugo Package Repository</title>
   <style>
     :root {
       --bg: #0d1117;
@@ -11,6 +11,7 @@
       --accent: #58a6ff;
       --code-bg: #161b22;
       --border: #30363d;
+      --muted: #8b949e;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -19,11 +20,12 @@
       color: var(--fg);
       line-height: 1.6;
       padding: 2rem;
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
     }
     h1 { color: var(--accent); margin-bottom: 0.5rem; }
-    h2 { color: var(--fg); margin-top: 2rem; margin-bottom: 1rem; font-size: 1.25rem; }
+    h2 { color: var(--fg); margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.25rem; }
+    h3 { color: var(--fg); margin-top: 1.5rem; margin-bottom: 0.75rem; font-size: 1rem; }
     p { margin-bottom: 1rem; }
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
@@ -37,43 +39,137 @@
       font-size: 0.875rem;
     }
     code { font-family: 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace; }
-    .subtitle { color: #8b949e; margin-bottom: 2rem; }
+    .subtitle { color: var(--muted); margin-bottom: 2rem; }
+    .package-card {
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .package-card h3 {
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .package-card .version {
+      font-size: 0.75rem;
+      color: var(--muted);
+      background: var(--border);
+      padding: 0.125rem 0.5rem;
+      border-radius: 4px;
+    }
+    .package-card p {
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+    .tabs {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+    .tab {
+      padding: 0.5rem 1rem;
+      border: none;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 0.875rem;
+    }
+    .tab:hover { background: var(--border); color: var(--fg); }
+    .tab.active { background: var(--accent); color: var(--bg); }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+    .section { margin-top: 3rem; }
   </style>
 </head>
 <body>
-  <h1>sls</h1>
-  <p class="subtitle">A smart fuzzy CLI selector for SSH config hosts</p>
+  <h1>jinmugo</h1>
+  <p class="subtitle">Package Repository for Debian/Ubuntu and Fedora/RHEL</p>
 
-  <p>
-    <a href="https://github.com/jinmugo/sls">GitHub</a>
-  </p>
+  <section class="section">
+    <h2>Quick Setup</h2>
 
-  <h2>Debian / Ubuntu</h2>
-  <pre><code># Add GPG key
-curl -fsSL https://package.jinmu.me/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/sls.gpg
+    <div class="tabs">
+      <button class="tab active" onclick="showTab('deb')">Debian / Ubuntu</button>
+      <button class="tab" onclick="showTab('rpm')">Fedora / RHEL</button>
+    </div>
+
+    <div id="deb" class="tab-content active">
+      <pre><code># Add GPG key
+curl -fsSL https://package.jinmu.me/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/jinmugo.gpg
 
 # Add repository
-echo "deb [signed-by=/etc/apt/keyrings/sls.gpg] https://package.jinmu.me/deb stable main" | sudo tee /etc/apt/sources.list.d/sls.list
+echo "deb [signed-by=/etc/apt/keyrings/jinmugo.gpg] https://package.jinmu.me/deb stable main" | sudo tee /etc/apt/sources.list.d/jinmugo.list
 
-# Install
-sudo apt update && sudo apt install sls</code></pre>
+# Install packages
+sudo apt update
+sudo apt install &lt;package-name&gt;</code></pre>
+    </div>
 
-  <h2>Fedora / RHEL</h2>
-  <pre><code># Add repository
-sudo tee /etc/yum.repos.d/sls.repo &lt;&lt; EOF
-[sls]
-name=sls
+    <div id="rpm" class="tab-content">
+      <pre><code># Add repository
+sudo tee /etc/yum.repos.d/jinmugo.repo &lt;&lt; EOF
+[jinmugo]
+name=jinmugo
 baseurl=https://package.jinmu.me/rpm
 enabled=1
 gpgcheck=1
 gpgkey=https://package.jinmu.me/gpg.key
 EOF
 
-# Install
-sudo dnf install sls</code></pre>
+# Install packages
+sudo dnf install &lt;package-name&gt;</code></pre>
+    </div>
+  </section>
 
-  <h2>macOS (Homebrew)</h2>
-  <pre><code>brew tap jinmugo/tap
-brew install sls</code></pre>
+  <section class="section">
+    <h2>Available Packages</h2>
+    <div id="packages-list">
+      <!-- Dynamic content loaded from packages.json -->
+      <div class="package-card">
+        <h3>
+          sls
+          <span class="version" id="sls-version">-</span>
+        </h3>
+        <p>A smart fuzzy CLI selector for SSH config hosts</p>
+        <a href="https://github.com/jinmugo/sls">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Repository URLs</h2>
+    <ul style="color: var(--muted); list-style: none;">
+      <li>APT: <code>https://package.jinmu.me/deb</code></li>
+      <li>YUM/DNF: <code>https://package.jinmu.me/rpm</code></li>
+      <li>GPG Key: <code>https://package.jinmu.me/gpg.key</code></li>
+    </ul>
+  </section>
+
+  <script>
+    function showTab(id) {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      document.querySelector(`[onclick="showTab('${id}')"]`).classList.add('active');
+      document.getElementById(id).classList.add('active');
+    }
+
+    // Load package versions from packages.json
+    fetch('/packages.json')
+      .then(r => r.json())
+      .then(data => {
+        Object.entries(data.packages || {}).forEach(([name, info]) => {
+          const el = document.getElementById(`${name}-version`);
+          if (el) el.textContent = info.version;
+        });
+      })
+      .catch(() => {});
+  </script>
 </body>
 </html>
