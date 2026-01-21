@@ -12,6 +12,7 @@
       --code-bg: #161b22;
       --border: #30363d;
       --muted: #8b949e;
+      --success: #3fb950;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -19,138 +20,269 @@
       background: var(--bg);
       color: var(--fg);
       line-height: 1.6;
-      padding: 2rem;
-      max-width: 900px;
+      padding: 2rem 1rem;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 720px;
       margin: 0 auto;
     }
-    h1 { color: var(--accent); margin-bottom: 0.5rem; }
-    h2 { color: var(--fg); margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.25rem; }
-    h3 { color: var(--fg); margin-top: 1.5rem; margin-bottom: 0.75rem; font-size: 1rem; }
-    p { margin-bottom: 1rem; }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    header {
+      text-align: center;
+      padding: 2rem 0 3rem;
+      border-bottom: 1px solid var(--border);
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 1rem;
+    }
+    section {
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    section:last-child {
+      border-bottom: none;
+    }
+    h2 {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
     pre {
       background: var(--code-bg);
       border: 1px solid var(--border);
       border-radius: 6px;
       padding: 1rem;
       overflow-x: auto;
-      margin-bottom: 1rem;
-      font-size: 0.875rem;
+      font-size: 0.8125rem;
+      line-height: 1.5;
     }
-    code { font-family: 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace; }
-    .subtitle { color: var(--muted); margin-bottom: 2rem; }
-    .package-card {
-      background: var(--code-bg);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1.25rem;
-      margin-bottom: 1rem;
-    }
-    .package-card h3 {
-      margin-top: 0;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .package-card .version {
-      font-size: 0.75rem;
-      color: var(--muted);
-      background: var(--border);
-      padding: 0.125rem 0.5rem;
-      border-radius: 4px;
-    }
-    .package-card p {
-      color: var(--muted);
-      margin-bottom: 0.5rem;
-      font-size: 0.9rem;
+    code {
+      font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
     }
     .tabs {
       display: flex;
-      gap: 0.5rem;
-      margin-bottom: 1rem;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 0.5rem;
+      gap: 0.25rem;
+      margin-bottom: 0.75rem;
     }
     .tab {
-      padding: 0.5rem 1rem;
+      padding: 0.375rem 0.75rem;
       border: none;
       background: transparent;
       color: var(--muted);
       cursor: pointer;
+      border-radius: 6px;
+      font-size: 0.8125rem;
+      font-family: inherit;
+      transition: all 0.15s;
+    }
+    .tab:hover {
+      background: var(--border);
+      color: var(--fg);
+    }
+    .tab.active {
+      background: var(--accent);
+      color: var(--bg);
+    }
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    .package-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .package-card {
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    .package-info {
+      flex: 1;
+      min-width: 0;
+    }
+    .package-name {
+      font-weight: 600;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .package-name a {
+      color: var(--fg);
+      text-decoration: none;
+    }
+    .package-name a:hover {
+      color: var(--accent);
+    }
+    .version {
+      font-size: 0.6875rem;
+      color: var(--success);
+      background: rgba(63, 185, 80, 0.15);
+      padding: 0.125rem 0.5rem;
+      border-radius: 10px;
+      font-weight: 500;
+    }
+    .package-desc {
+      color: var(--muted);
+      font-size: 0.8125rem;
+      margin-top: 0.25rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .package-install {
+      flex-shrink: 0;
+    }
+    .install-cmd {
+      background: var(--bg);
+      border: 1px solid var(--border);
       border-radius: 4px;
+      padding: 0.375rem 0.625rem;
+      font-family: 'SF Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--muted);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .install-cmd:hover {
+      border-color: var(--accent);
+      color: var(--fg);
+    }
+    .empty-state {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--muted);
+    }
+    .empty-state p {
       font-size: 0.875rem;
     }
-    .tab:hover { background: var(--border); color: var(--fg); }
-    .tab.active { background: var(--accent); color: var(--bg); }
-    .tab-content { display: none; }
-    .tab-content.active { display: block; }
-    .section { margin-top: 3rem; }
+    .info-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.8125rem;
+    }
+    .info-label {
+      color: var(--muted);
+      min-width: 80px;
+    }
+    .info-value code {
+      background: var(--code-bg);
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      color: var(--muted);
+      font-size: 0.75rem;
+    }
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: var(--accent);
+    }
+    @media (max-width: 600px) {
+      .package-card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .package-install {
+        width: 100%;
+      }
+      .install-cmd {
+        width: 100%;
+        text-align: center;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>jinmugo</h1>
-  <p class="subtitle">Package Repository for Debian/Ubuntu and Fedora/RHEL</p>
+  <div class="container">
+    <header>
+      <h1>jinmugo</h1>
+      <p class="subtitle">Linux Package Repository</p>
+    </header>
 
-  <section class="section">
-    <h2>Quick Setup</h2>
-
-    <div class="tabs">
-      <button class="tab active" onclick="showTab('deb')">Debian / Ubuntu</button>
-      <button class="tab" onclick="showTab('rpm')">Fedora / RHEL</button>
-    </div>
-
-    <div id="deb" class="tab-content active">
-      <pre><code># Add GPG key
-curl -fsSL https://package.jinmu.me/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/jinmugo.gpg
-
-# Add repository
+    <section>
+      <h2>Setup</h2>
+      <div class="tabs">
+        <button class="tab active" onclick="showTab('deb')">Debian / Ubuntu</button>
+        <button class="tab" onclick="showTab('rpm')">Fedora / RHEL</button>
+      </div>
+      <div id="deb" class="tab-content active">
+        <pre><code>curl -fsSL https://package.jinmu.me/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/jinmugo.gpg
 echo "deb [signed-by=/etc/apt/keyrings/jinmugo.gpg] https://package.jinmu.me/deb stable main" | sudo tee /etc/apt/sources.list.d/jinmugo.list
-
-# Install packages
-sudo apt update
-sudo apt install &lt;package-name&gt;</code></pre>
-    </div>
-
-    <div id="rpm" class="tab-content">
-      <pre><code># Add repository
-sudo tee /etc/yum.repos.d/jinmugo.repo &lt;&lt; EOF
+sudo apt update</code></pre>
+      </div>
+      <div id="rpm" class="tab-content">
+        <pre><code>sudo tee /etc/yum.repos.d/jinmugo.repo &lt;&lt; 'EOF'
 [jinmugo]
 name=jinmugo
 baseurl=https://package.jinmu.me/rpm
 enabled=1
 gpgcheck=1
 gpgkey=https://package.jinmu.me/gpg.key
-EOF
-
-# Install packages
-sudo dnf install &lt;package-name&gt;</code></pre>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Available Packages</h2>
-    <div id="packages-list">
-      <!-- Dynamic content loaded from packages.json -->
-      <div class="package-card">
-        <h3>
-          sls
-          <span class="version" id="sls-version">-</span>
-        </h3>
-        <p>A smart fuzzy CLI selector for SSH config hosts</p>
-        <a href="https://github.com/jinmugo/sls">GitHub</a>
+EOF</code></pre>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section">
-    <h2>Repository URLs</h2>
-    <ul style="color: var(--muted); list-style: none;">
-      <li>APT: <code>https://package.jinmu.me/deb</code></li>
-      <li>YUM/DNF: <code>https://package.jinmu.me/rpm</code></li>
-      <li>GPG Key: <code>https://package.jinmu.me/gpg.key</code></li>
-    </ul>
-  </section>
+    <section>
+      <h2>Packages</h2>
+      <div id="package-list" class="package-list">
+        <div class="empty-state">
+          <p>Loading packages...</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Repository Info</h2>
+      <div class="info-list">
+        <div class="info-item">
+          <span class="info-label">APT</span>
+          <span class="info-value"><code>https://package.jinmu.me/deb</code></span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">YUM/DNF</span>
+          <span class="info-value"><code>https://package.jinmu.me/rpm</code></span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">GPG Key</span>
+          <span class="info-value"><code>https://package.jinmu.me/gpg.key</code></span>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <a href="https://github.com/jinmugo">github.com/jinmugo</a>
+    </footer>
+  </div>
 
   <script>
     function showTab(id) {
@@ -160,16 +292,45 @@ sudo dnf install &lt;package-name&gt;</code></pre>
       document.getElementById(id).classList.add('active');
     }
 
-    // Load package versions from packages.json
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text);
+    }
+
+    function renderPackages(packages) {
+      const container = document.getElementById('package-list');
+      const entries = Object.entries(packages);
+
+      if (entries.length === 0) {
+        container.innerHTML = `
+          <div class="empty-state">
+            <p>No packages available yet.</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = entries.map(([name, info]) => `
+        <div class="package-card">
+          <div class="package-info">
+            <div class="package-name">
+              <a href="https://github.com/${info.repo}" target="_blank">${name}</a>
+              <span class="version">${info.version}</span>
+            </div>
+            <div class="package-desc">${info.description || ''}</div>
+          </div>
+          <div class="package-install">
+            <div class="install-cmd" onclick="copyToClipboard('sudo apt install ${name}')" title="Click to copy">
+              apt install ${name}
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
     fetch('/packages.json')
       .then(r => r.json())
-      .then(data => {
-        Object.entries(data.packages || {}).forEach(([name, info]) => {
-          const el = document.getElementById(`${name}-version`);
-          if (el) el.textContent = info.version;
-        });
-      })
-      .catch(() => {});
+      .then(data => renderPackages(data.packages || {}))
+      .catch(() => renderPackages({}));
   </script>
 </body>
 </html>
