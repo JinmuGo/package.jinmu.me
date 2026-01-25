@@ -1,0 +1,18 @@
+Origin: jinmugo
+Label: jinmugo
+Suite: stable
+Codename: stable
+Architectures: amd64 arm64
+Components: main
+Description: jinmugo package repository
+Date: Sun, 25 Jan 2026 05:58:11 +0000
+MD5Sum:
+ 951dac5f20b5c285355ffd0a94e0a446 480 main/binary-amd64/Packages
+ 08b023b9ab72b0ceaaff2245eb697755 384 main/binary-amd64/Packages.gz
+ be76603a8683cfd28ae8f38fb529ce8a 480 main/binary-arm64/Packages
+ 43f63fbb2f7d56a164799de6a1f8f185 388 main/binary-arm64/Packages.gz
+SHA256:
+ 4b372deeeceafd6c41bec18e6103690cb5d6f61b99fb8156e9b8bddbedd87086 480 main/binary-amd64/Packages
+ e9de5a651dc060cdb5d9eb903dc4804943ce8656020ddba0ef3e1f86e4cfb7c1 384 main/binary-amd64/Packages.gz
+ ad6b4b0bbaf66deef7f207b3181f3c5ea54c9457189cb2ee70fedcc677420415 480 main/binary-arm64/Packages
+ d4fb104acd24b57c7d32e9dccd54285579ab8663c0d9404c7f3461f96fbe1bb2 388 main/binary-arm64/Packages.gz

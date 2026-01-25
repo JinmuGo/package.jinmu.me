@@ -1,3 +1,10 @@
 {
-  "packages": {}
+  "packages": {
+    "sls": {
+      "version": "v0.3.1",
+      "repo": "jinmugo/sls",
+      "description": "A smart fuzzy CLI selector for SSH config hosts",
+      "updated": "2026-01-25T05:58:13Z"
+    }
+  }
 }
