@@ -1,0 +1,11 @@
+{
+  "name": "package-jinmu-me",
+  "version": "1.0.0",
+  "description": "jinmugo Linux Package Repository",
+  "scripts": {
+    "deploy": "wrangler pages deploy ."
+  },
+  "devDependencies": {
+    "wrangler": "^3.101.0"
+  }
+}
