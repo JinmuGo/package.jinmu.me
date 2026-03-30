@@ -8,31 +8,31 @@ Codename: stable
 Architectures: amd64 arm64
 Components: main
 Description: jinmugo package repository
-Date: Mon, 30 Mar 2026 10:59:35 +0000
+Date: Mon, 30 Mar 2026 11:09:16 +0000
 MD5Sum:
  733939134b93430096de310d4d6b0f88 467 main/binary-arm64/Packages
- 9e8dff1e19df516e6d381031a67a6a1c 377 main/binary-arm64/Packages.gz
+ 5a0e6e92356b5d8f3435abf169cdf874 377 main/binary-arm64/Packages.gz
  d67fccbc82aadfeeab8bcbee633e168a 497 main/binary-amd64/Packages
- db462c2a496c4eacea33fe769c19d5ba 392 main/binary-amd64/Packages.gz
+ aef245cf0a611c788d623481cbb9ff53 392 main/binary-amd64/Packages.gz
 SHA256:
  df25ed7fc9f952b6887d29d70c5eb2f3da62582315ebed64e2aaf7166a2e5b74 467 main/binary-arm64/Packages
- 676c71ef50eba1de24c51df618da71877c8926f7c86f2f88fee38eb76e54527c 377 main/binary-arm64/Packages.gz
+ 700acbf5e29cdddf0f817360015f3c4f52eef0829ef463cccd3bf61f0be30f51 377 main/binary-arm64/Packages.gz
  f1bcbd6bdc2fa4cf0d09b186cb08a38913a1764a82df446c5101675c5d2d2aa3 497 main/binary-amd64/Packages
- d8cf3e42852094594b877fe8a39777638d69a02cb69ecc5254ba3d61f5b5ef0e 392 main/binary-amd64/Packages.gz
+ 873b6df461abb90566d7902808d778bb23ef1b677058f0950e222a26d43d4552 392 main/binary-amd64/Packages.gz
 -----BEGIN PGP SIGNATURE-----
 
-iQJABAEBCgAqFiEEyAh10leg4Sj9b6ynwE3kytwMH2wFAmnKV5gMHGhpQGppbm11
-Lm1lAAoJEMBN5MrcDB9s51oP/jdq0s/s37phONdqWg6fYGJhHOaErI6dFiQgWOqV
-gbCgvo3uZkmPcNniZCfgosMp7dP1TSm3pH3GTML6buIzynRKT+kO0uJJoIjXvgl4
-TzwKID32IiKnZcJrC9dzUzwO5pQHvjfD3NUiih4fpwRaPo6JtGIgFCKeW/iD/agf
-0t4oDSYsojXljWbeBqyn8+Q2d4xkRk0O1akbgjej1HMZJ0qBDkSb9ULDuHgSn5cV
-v+Pb9jtvP4T4IyFd2bv5zCMrA82cMYhvjk0Gl0BOVbVSzGmSjcdCUsRHX+lPkarX
-ccKLBsTLV6RQpjHtkklDmlxJUPT8Fl1muMi3W2uGrVVCoTXhTmXkcEaOFHhxmjCl
-JiOdx2YFrM1CfAOkgluQrA8Tjk1dqekqpKJhzQtQo/VzPEfHNrRpf62ZiOYVpmje
-GWpML+WqBhzHWqvzT/RnLHpxv/gjzxcxwnPBCV0o6Gj8H35+1pBTqKUnVojprvUN
-zTM3gJR6jDlLvzSqoF53pB2fNAMxjmC30qXjeXQKDWV5RS0HNi3SJVCtwaU/6f98
-CqBW5OtPjsq+n/r5lpBsgdgOLwnQxyQzzHK+Vr/lUDeKvDxGWQ8DrydBbxDTCQ+0
-cswc9sFdENPfMHUDJKfs4aqXHKjreISzbWY8yOcAbCpicR9bsSu9+vWQcj2R2BXv
-ZrZI
-=id/7
+iQJABAEBCgAqFiEEyAh10leg4Sj9b6ynwE3kytwMH2wFAmnKWd0MHGhpQGppbm11
+Lm1lAAoJEMBN5MrcDB9s61UQAMlvIsIAXEzI3kxeThJvJN8UtYebcprgRS7vTfQQ
+ST4ArYW6Poh/71ru5zEULnZWXRAg3cSF43XgKCSBX0/KSV9eAD4vpHW9pDwsNTpv
+U/MVxte46Abre7jFhvIW4ApSTV+pxinK/1MME0bZskLeVVOy3ipG+IsdeYzURUAH
+FgbYZFl44cZYWRWp8KG5hnEsGPgyoirx0lmaJaXroJ8i1rTM2vBISljXut+B1k8z
+JPiZtvQz/bgoDOt8kCNlA7Kjd1jNI5qOkP8ygnN/4j3mARJdgyX3+/yIBsTIkDrt
+FPej0r9oIqLnYWvkgWCW57eETCk3v7BpoWHg0hZm98qbsaqr9rXrAEm7xFl0MAOt
+64QQgTu6u6vD5CbfZV7bjo3oJlTFxfnkv3Sj0gpw07s1PN/343YxuNhfQl7HixLA
+ARXnIteQvxhJg6kw0RUi9+NMnGMAljnFtgjriiq37CZy41fa7EXXSY6A6PAY7Iwu
+bO18lsW7/86qppv55fu4LBlF8lFPTlBaYLyR/VZQJViTe7j3ChnFKR5bjZieyM/A
+Y4697IjAsi6zHq3LKw2XbXtI6Y6LhJyUS7Pa4rNx8t/PretrCK7uTLT9LtB3I5qV
+i0wzm2Z7XvioVBnhF3wNX1eYZYw9NncCQzV0jGOwwmtuK92NHASX+MisHHYcLauA
+QO6Z
+=WWm4
 -----END PGP SIGNATURE-----
