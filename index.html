@@ -231,25 +231,10 @@
 
     <section>
       <h2>Setup</h2>
-      <div class="tabs">
-        <button class="tab active" onclick="showTab('deb')">Debian / Ubuntu</button>
-        <button class="tab" onclick="showTab('rpm')">Fedora / RHEL</button>
-      </div>
-      <div id="deb" class="tab-content active">
-        <pre><code>curl -fsSL https://package.jinmu.me/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/jinmugo.gpg
-echo "deb [signed-by=/etc/apt/keyrings/jinmugo.gpg] https://package.jinmu.me/deb stable main" | sudo tee /etc/apt/sources.list.d/jinmugo.list
-sudo apt update</code></pre>
-      </div>
-      <div id="rpm" class="tab-content">
-        <pre><code>sudo tee /etc/yum.repos.d/jinmugo.repo &lt;&lt; 'EOF'
-[jinmugo]
-name=jinmugo
-baseurl=https://package.jinmu.me/rpm
-enabled=1
-gpgcheck=1
-gpgkey=https://package.jinmu.me/gpg.key
-EOF</code></pre>
-      </div>
+      <pre><code>curl -fsSL https://package.jinmu.me/install.sh | sudo sh</code></pre>
+      <p style="color: var(--muted); font-size: 0.75rem; margin-top: 0.5rem;">
+        Works on Debian, Ubuntu, Fedora, RHEL, CentOS, Rocky, Alma
+      </p>
     </section>
 
     <section>
