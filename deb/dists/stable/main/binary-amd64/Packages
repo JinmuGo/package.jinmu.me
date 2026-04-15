@@ -1,14 +1,14 @@
 Package: sls
-Version: 1.1.2
+Version: 1.2.0
 Architecture: amd64
 Maintainer: JinmuGo <hi@jinmugo.me>
 Installed-Size: 10237
 Depends: fzf
-Filename: pool/main/s/sls/sls_1.1.2_linux_amd64.deb
-Size: 4132572
-MD5sum: bcfd949dfbe7c4e080fa53d29465d68e
-SHA1: 95c0bc42dca86846c28631c5fec38146a478670d
-SHA256: 040baa46ce1fcfcec270235f3d29da411aa1a87b8d02fc0415b91101cbda1bf8
+Filename: pool/main/s/sls/sls_1.2.0_linux_amd64.deb
+Size: 4133220
+MD5sum: d08cc9b0953025c648b5364219050c14
+SHA1: cd0129f64bb223fd9437013b19d645a00ff04a68
+SHA256: e68b97454455b931f03f222594698260b1a2fa674d4c06687de1ac79d1cf9a2d
 Priority: optional
 Homepage: https://github.com/jinmugo/sls
 Description: A smart fuzzy CLI selector for SSH config hosts
