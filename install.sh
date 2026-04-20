@@ -42,41 +42,40 @@ cleanup_legacy() {
 
 # --- apt setup ---
 setup_deb() {
-  if [ -f "/etc/apt/sources.list.d/${REPO_NAME}.list" ]; then
-    info "Repository already configured"
-    return
-  fi
-
   info "Setting up apt repository..."
   apt-get update -qq -o Dir::Etc::sourcelist=/dev/null -o Dir::Etc::sourceparts=/dev/null >/dev/null 2>&1 || true
   apt-get install -y -qq curl gnupg >/dev/null 2>&1
 
   mkdir -p /etc/apt/keyrings
-  curl -fsSL "${REPO_URL}/gpg.key" | gpg --dearmor -o "/etc/apt/keyrings/${REPO_NAME}.gpg"
-  echo "deb [signed-by=/etc/apt/keyrings/${REPO_NAME}.gpg] ${REPO_URL}/deb stable main" \
-    > "/etc/apt/sources.list.d/${REPO_NAME}.list"
+  curl -fsSL "${REPO_URL}/gpg.key" | gpg --dearmor --yes -o "/etc/apt/keyrings/${REPO_NAME}.gpg"
 
-  info "Repository added"
+  if [ ! -f "/etc/apt/sources.list.d/${REPO_NAME}.list" ]; then
+    echo "deb [signed-by=/etc/apt/keyrings/${REPO_NAME}.gpg] ${REPO_URL}/deb stable main" \
+      > "/etc/apt/sources.list.d/${REPO_NAME}.list"
+  fi
+
+  info "Repository ready"
 }
 
 # --- yum/dnf setup ---
 setup_rpm() {
-  if [ -f "/etc/yum.repos.d/${REPO_NAME}.repo" ]; then
-    info "Repository already configured"
-    return
-  fi
-
   info "Setting up yum/dnf repository..."
-  cat > "/etc/yum.repos.d/${REPO_NAME}.repo" << EOF
+  mkdir -p /etc/pki/rpm-gpg
+  curl -fsSL "${REPO_URL}/gpg.key" -o "/etc/pki/rpm-gpg/RPM-GPG-KEY-${REPO_NAME}"
+  rpm --import "/etc/pki/rpm-gpg/RPM-GPG-KEY-${REPO_NAME}" >/dev/null 2>&1 || true
+
+  if [ ! -f "/etc/yum.repos.d/${REPO_NAME}.repo" ]; then
+    cat > "/etc/yum.repos.d/${REPO_NAME}.repo" << EOF
 [${REPO_NAME}]
 name=${REPO_NAME}
 baseurl=${REPO_URL}/rpm
 enabled=1
 gpgcheck=1
-gpgkey=${REPO_URL}/gpg.key
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-${REPO_NAME}
 EOF
+  fi
 
-  info "Repository added"
+  info "Repository ready"
 }
 
 # --- install package ---
