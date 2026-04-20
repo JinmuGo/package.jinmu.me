@@ -5,14 +5,14 @@ Codename: stable
 Architectures: amd64 arm64
 Components: main
 Description: jinmugo package repository
-Date: Mon, 20 Apr 2026 01:38:39 +0000
+Date: Mon, 20 Apr 2026 02:25:51 +0000
 MD5Sum:
- b794dd0eeacedb05e8383476adcc6fef 569 main/binary-amd64/Packages.gz
+ e7262152cbe88edf8e6bb59f3a40de3f 569 main/binary-amd64/Packages.gz
  7bff238a01f57efb3de9c0bddd33a510 995 main/binary-amd64/Packages
- a71a270ea09e5fee1ef996f47091b888 553 main/binary-arm64/Packages.gz
+ 088046edae33af63a1c0b11d9b82e9fd 553 main/binary-arm64/Packages.gz
  c9a846c4ba805ba1bc97553eae85e6d3 934 main/binary-arm64/Packages
 SHA256:
- 68fa2fa8287349dc215c834d363c05534210ea6233f91f2158c2c85e9fab39a1 569 main/binary-amd64/Packages.gz
+ 900cd1c69eeda9a9b4fad1e590fb364eb67d629f01f8814f44e980452e124f08 569 main/binary-amd64/Packages.gz
  0722fb402f1bf780717148d552f340d6aa3ea2f5124d3d13973bfd9d58f6577c 995 main/binary-amd64/Packages
- 1b1603511b86d6084917db46c8b529781fe84b252b173127c0141d0ad6477cd2 553 main/binary-arm64/Packages.gz
+ d682208692c0d1e381ef0096a32ae70c8b41b40e752718f7cde05e788a0479b0 553 main/binary-arm64/Packages.gz
  5d0b4317a1c422548b1a38ba779ff01bbf6c86345791d00d98ef9877791bc62a 934 main/binary-arm64/Packages
