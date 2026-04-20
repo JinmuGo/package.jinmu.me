@@ -8,30 +8,30 @@ Codename: stable
 Architectures: amd64 arm64
 Components: main
 Description: jinmugo package repository
-Date: Mon, 20 Apr 2026 02:34:34 +0000
+Date: Mon, 20 Apr 2026 02:52:57 +0000
 MD5Sum:
- bf8f71816cca445571b16edeeaaa84c5 569 main/binary-amd64/Packages.gz
- 7bff238a01f57efb3de9c0bddd33a510 995 main/binary-amd64/Packages
- b5765f9263874998fc804b8bf28f42e2 553 main/binary-arm64/Packages.gz
- c9a846c4ba805ba1bc97553eae85e6d3 934 main/binary-arm64/Packages
+ 08de25223a4afd27838403cf11c9b4e9 691 main/binary-amd64/Packages.gz
+ 66518383f8d7eef40bb3ac1a4836090b 1500 main/binary-amd64/Packages
+ 2671919bfbaf1be257da18c7e6df0258 665 main/binary-arm64/Packages.gz
+ 9e543ce3d183bba1e7c2afb502a1bbc0 1409 main/binary-arm64/Packages
 SHA256:
- ee7b53e4a1da88e111ea37332c8589b3bc6c021142c48621b87f59b8eb0afe69 569 main/binary-amd64/Packages.gz
- 0722fb402f1bf780717148d552f340d6aa3ea2f5124d3d13973bfd9d58f6577c 995 main/binary-amd64/Packages
- 9f95c31e454626fef398b9c37201ed09e89814de22fba9d22d94f9a1a29d28c7 553 main/binary-arm64/Packages.gz
- 5d0b4317a1c422548b1a38ba779ff01bbf6c86345791d00d98ef9877791bc62a 934 main/binary-arm64/Packages
+ 978f413ddbb2006fbb0373ab88d52f5eae9eaafb806e511dd862209092d7e2e0 691 main/binary-amd64/Packages.gz
+ 65c8fa831efb3e13d9068abd73bf97c12817d948416dc6550e93549298a10c00 1500 main/binary-amd64/Packages
+ dd2e3b4b35ce7b7c44f6473c5f5fdd46ba8944320c81ed63a69efff998a23b11 665 main/binary-arm64/Packages.gz
+ c0b000c06487ee4ee0c34b68b137993532048cd3e7fa3d9ded919460616fe9da 1409 main/binary-arm64/Packages
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCgAdFiEEBPX/wH+QpV5UTn9YMaufZlRnm/gFAmnlkLwACgkQMaufZlRn
-m/jIsQ/8DNQX1EzTYuIQsOVmtf0bleDxjV5QLUBEMDM+v1+jmOJiqDEg2FUUh46B
-6FKETrgdXZ/H4Wk8qYjmLosg+Y0nM6PiEgEubOFsQcW8El4VvS8FQLcwtqbs/8sK
-P9DrParlPthsX7ENNfnF3MTvP1sWsi5zsdaQFJiuztn2Hii429NX53940l/FlBrU
-izuZ58u8DjdCSc1aO0yt0eu7lN8JBf94hIORXE6WVnuv0JOAEbutTrnC5vB8nPWA
-UBxshBMti/1VgJ8GyeH+FskWBBmqat50IshbgdL2rswFs0u3y2OFGS59f+I2HQrj
-/8Pp5PTJHRmO+sfqVn0T6shOQDyJRGEp7qYqykDly/knD2zoEE8hpKX7cUdAkNvj
-fEbfYZBagOJfA7QTsDkEEvTg2ni5sE+dW4V+W/STXVFjAYkgH6SjVwHomL2ZsrT1
-9ae8oF1om+XO/SowvF2tEyib32SG5wpdg5EQIPQiJvYuXwaVB562pr+O6zaVvsn8
-Fnwqn4kIPjN34fvlsh1EIz1VwnC571feHjK3GylBJ6WTw5+T58tNbU5DrlISzxz0
-p4Dm0ANikUHn7lWoh7hnXme9dwBeR2Bp6ixI/jbtrj7BZxkbyloXIb7tQd6Sfh2H
-/BQcGci98NGRSa+4lyQdfqAqb27JrvquUSzXiP7S3XBCdIJji0o=
-=7Mgd
+iQIzBAEBCgAdFiEEBPX/wH+QpV5UTn9YMaufZlRnm/gFAmnllQoACgkQMaufZlRn
+m/gFSBAAs2aXfJnG8M20c2mHpNXC2Tr1TpjgllcaBGPwV17qgNTKO7WD2PbryBDS
+4sCc9L2mMCA6UYNcYgjFLzPKFHTySj8eqfznultYu9Yw2axi0QYFLoHjmSeClwUc
+oDGnDtAsO/25NYZHzfHNVKj2xYxd/esYfhs8eV/KVE6ycDHfbXit3PVRytuqvnqb
+pgs2mGoC18ODcukiilfohNt4/tgFMSPRGN1IOYMCHa9AAAJ4XEtHoRekSeLfi7EZ
+YENLJj+2f6VeWMga0h0/p0yqQ6dpn5sROY16y04xm6s0vfqE4G171VoE4BnGKiNn
+UnR1JIlbX7S0dSW0lZpR99oodohWfiAMuORIvGB6s6Z2B4NGTWeL6OUduBInMLrK
+NJFxVvewbF4UFk0mcFOqLndMtQHaCzs5e44wl4CPAHDZ7gH++NFeJ7NG0z4ma9Ut
+ETKyiSeL9C8HuCpQ5VgmPtM2dMv80C5AD/069hgfFyBWYNk7KaJ+kb5QRC0892hk
+7KLzbJQWzpDyDvl9qErYhyyJ8eChUZdENbecktz5xsZ9Ai8voIwmF7muC47RSe2/
+SK27izoL6rxPSB1Z2ig2zPZCB8foEoCuI1HRSNACWrbFxaKtOM4vVhddnov8W3mU
+ApSEyoAQkEGYlkAYTRVR9FNt4cy61qZlDciNoMhxMU5orH5s6Hg=
+=KlFz
 -----END PGP SIGNATURE-----
