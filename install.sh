@@ -43,8 +43,11 @@ cleanup_legacy() {
 # --- apt setup ---
 setup_deb() {
   info "Setting up apt repository..."
-  apt-get update -qq -o Dir::Etc::sourcelist=/dev/null -o Dir::Etc::sourceparts=/dev/null >/dev/null 2>&1 || true
-  apt-get install -y -qq curl gnupg >/dev/null 2>&1
+
+  if ! command -v curl >/dev/null 2>&1 || ! command -v gpg >/dev/null 2>&1; then
+    apt-get update -qq
+    apt-get install -y -qq curl gnupg
+  fi
 
   mkdir -p /etc/apt/keyrings
   curl -fsSL "${REPO_URL}/gpg.key" | gpg --dearmor --yes -o "/etc/apt/keyrings/${REPO_NAME}.gpg"
