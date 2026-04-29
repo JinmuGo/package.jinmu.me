@@ -27,16 +27,16 @@ Homepage: https://github.com/jinmugo/cinch
 Description: Remote clipboard tool. Push from SSH, pull to local.
 
 Package: sls
-Version: 1.2.1
+Version: 1.2.2
 Architecture: arm64
 Maintainer: JinmuGo <hi@jinmugo.me>
 Installed-Size: 9537
 Depends: fzf
-Filename: pool/main/s/sls/sls_1.2.1_linux_arm64.deb
-Size: 3749046
-MD5sum: eb5c9f55962267e42945bd6cdbf3c782
-SHA1: 4596a07202be287636a921fbf7885b838b43f130
-SHA256: e05f957555a7405c302bd26901a2da76da75b9661b0d93ba930b075185e152b0
+Filename: pool/main/s/sls/sls_1.2.2_linux_arm64.deb
+Size: 3749096
+MD5sum: 8f95edee35880facc230e0b81968c06f
+SHA1: 3f71fb1bd2d8ded978e561dd5b7f8ffe5ce8b903
+SHA256: a88b956876cd851bb5b675593be49d36be1c3e7a3a886290f9c3dc397e7ba28c
 Priority: optional
 Homepage: https://github.com/jinmugo/sls
 Description: A smart fuzzy CLI selector for SSH config hosts

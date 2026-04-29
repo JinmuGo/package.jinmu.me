@@ -29,16 +29,16 @@ Description: Remote clipboard tool. Push from SSH, pull to local.
 Architecture-Variant: amd64v1
 
 Package: sls
-Version: 1.2.1
+Version: 1.2.2
 Architecture: amd64
 Maintainer: JinmuGo <hi@jinmugo.me>
 Installed-Size: 10237
 Depends: fzf
-Filename: pool/main/s/sls/sls_1.2.1_linux_amd64.deb
-Size: 4133542
-MD5sum: e7f6ef2463045c22be1b61609c712443
-SHA1: a681f6c5783bc300100bae0d058f9d05f99ea06e
-SHA256: 9761c6f4d7eca40cedde73f3d3b5739382944629a9e8d7f9d3ed62bdae716441
+Filename: pool/main/s/sls/sls_1.2.2_linux_amd64.deb
+Size: 4133338
+MD5sum: 78062f26426600bd244c86630363d973
+SHA1: 66ea696bc84f419d2c0ec3c0b0f836b921c075f4
+SHA256: f77f38e131aedd137181717305a155fba965bf453f8961626d321fb5f8c10dd4
 Priority: optional
 Homepage: https://github.com/jinmugo/sls
 Description: A smart fuzzy CLI selector for SSH config hosts
