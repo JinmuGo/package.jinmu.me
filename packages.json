@@ -5,12 +5,6 @@
       "repo": "jinmugo/sls",
       "description": "A smart fuzzy CLI selector for SSH config hosts",
       "updated": "2026-04-29T11:46:12Z"
-    },
-    "cinch": {
-      "version": "v0.0.2",
-      "repo": "jinmugo/cinch",
-      "description": "Remote clipboard tool. Push from SSH, pull to local.",
-      "updated": "2026-04-20T03:01:03Z"
     }
   }
 }

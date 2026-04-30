@@ -1,31 +1,3 @@
-Package: cinch
-Version: 0.0.1
-Architecture: arm64
-Maintainer: JinmuGo <hi@jinmugo.me>
-Installed-Size: 6241
-Filename: pool/main/c/cinch/cinch_0.0.1_linux_arm64.deb
-Size: 2628688
-MD5sum: 431675046c86d40731a406abcc3ab4ea
-SHA1: 63e5a59335a38ec24a0961778e8fdd933c055477
-SHA256: 51df24ea6f505fcc3a60aba1931c511c4bc1fb8ad3d6bf982710df344b3d015d
-Priority: optional
-Homepage: https://github.com/jinmugo/cinch
-Description: Remote clipboard tool. Push from SSH, pull to local.
-
-Package: cinch-cli
-Version: 0.0.2
-Architecture: arm64
-Maintainer: JinmuGo <hi@jinmugo.me>
-Installed-Size: 6241
-Filename: pool/main/c/cinch/cinch-cli_0.0.2_linux_arm64.deb
-Size: 2628676
-MD5sum: be030095db8884f1d3924902c1a5dabd
-SHA1: d011cb232496e90c695002f4544dce301ec5763c
-SHA256: f21c85fb6788c5a17eb122e06494cfdeecbd266cebd6620528ed712da951c1d3
-Priority: optional
-Homepage: https://github.com/jinmugo/cinch
-Description: Remote clipboard tool. Push from SSH, pull to local.
-
 Package: sls
 Version: 1.2.2
 Architecture: arm64
